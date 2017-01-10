@@ -1,0 +1,27 @@
+//
+//  wechat_XW.pch
+//  Wechat_XW
+//
+//  Created by 大家保 on 2017/1/9.
+//  Copyright © 2017年 大家保. All rights reserved.
+//
+
+#ifndef wechat_XW_pch
+#define wechat_XW_pch
+
+#define kGAP 10
+#define kThemeColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
+#define kAvatar_Size 40
+#define kTabBarHeight       49
+#define kNavbarHeight       64
+#define kAlmostZero         0.0000001
+#define kScreenWidth    [[UIScreen mainScreen] bounds].size.width
+#define kScreenHeight    [[UIScreen mainScreen] bounds].size.height
+
+#import "Masonry.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+#import "UIImageView+WebCache.h"
+#import "ChatKeyBoardMacroDefine.h"
+
+#endif 
+
