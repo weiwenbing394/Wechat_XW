@@ -22,6 +22,7 @@
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "UIImageView+WebCache.h"
 #import "ChatKeyBoardMacroDefine.h"
+#import "PinYin4Objc.h"
 
 #endif 
 
