@@ -72,6 +72,7 @@
     searchController.searchBar.placeholder=@"搜索";
     searchController.searchBar.tintColor=kThemeColor;
     searchController.searchBar.delegate=self;
+    searchController.hidesNavigationBarDuringPresentation=YES;
     //设置searchBar的边框颜色，四周的颜色
     searchController.searchBar.barTintColor=[UIColor groupTableViewBackgroundColor];
     UIImageView *view=[[[searchController.searchBar.subviews objectAtIndex:0] subviews] firstObject];
@@ -221,7 +222,6 @@
         }
     }
     [resultController updateAddressBookData:updateArray];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{

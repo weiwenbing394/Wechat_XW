@@ -390,6 +390,12 @@
 		51522A421E2732DF00C6C3EE /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 51522A3B1E2732DF00C6C3EE /* PinyinHelper.m */; };
 		51522A431E2732DF00C6C3EE /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51522A3D1E2732DF00C6C3EE /* unicode_to_hanyu_pinyin.txt */; };
 		51522A471E2749FD00C6C3EE /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51522A461E2749FD00C6C3EE /* TestViewController.m */; };
+		51CFFAE71E289D560068E2BC /* UIImage+XWLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CFFAE61E289D560068E2BC /* UIImage+XWLaunchImage.m */; };
+		51CFFAEA1E289EB00068E2BC /* XWAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CFFAE91E289EB00068E2BC /* XWAdModel.m */; };
+		51CFFAED1E289EE20068E2BC /* XWLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CFFAEC1E289EE20068E2BC /* XWLaunchView.m */; };
+		51CFFAF01E289FB00068E2BC /* XWLaunchViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CFFAEF1E289FB00068E2BC /* XWLaunchViewManager.m */; };
+		51CFFAF31E28A85D0068E2BC /* XWWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CFFAF21E28A85D0068E2BC /* XWWebViewProgressView.m */; };
+		51CFFAF61E28A8EE0068E2BC /* XWAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CFFAF51E28A8EE0068E2BC /* XWAdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -873,6 +879,18 @@
 		51522A3D1E2732DF00C6C3EE /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
 		51522A451E2749FD00C6C3EE /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		51522A461E2749FD00C6C3EE /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		51CFFAE51E289D560068E2BC /* UIImage+XWLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XWLaunchImage.h"; sourceTree = "<group>"; };
+		51CFFAE61E289D560068E2BC /* UIImage+XWLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XWLaunchImage.m"; sourceTree = "<group>"; };
+		51CFFAE81E289EB00068E2BC /* XWAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWAdModel.h; sourceTree = "<group>"; };
+		51CFFAE91E289EB00068E2BC /* XWAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWAdModel.m; sourceTree = "<group>"; };
+		51CFFAEB1E289EE20068E2BC /* XWLaunchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWLaunchView.h; sourceTree = "<group>"; };
+		51CFFAEC1E289EE20068E2BC /* XWLaunchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWLaunchView.m; sourceTree = "<group>"; };
+		51CFFAEE1E289FB00068E2BC /* XWLaunchViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWLaunchViewManager.h; sourceTree = "<group>"; };
+		51CFFAEF1E289FB00068E2BC /* XWLaunchViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWLaunchViewManager.m; sourceTree = "<group>"; };
+		51CFFAF11E28A85D0068E2BC /* XWWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWWebViewProgressView.h; sourceTree = "<group>"; };
+		51CFFAF21E28A85D0068E2BC /* XWWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWWebViewProgressView.m; sourceTree = "<group>"; };
+		51CFFAF41E28A8EE0068E2BC /* XWAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWAdViewController.h; sourceTree = "<group>"; };
+		51CFFAF51E28A8EE0068E2BC /* XWAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWAdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1679,6 +1697,7 @@
 		5151FF381E1F681A00ED2E20 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				51CFFAE11E289CA00068E2BC /* XWLaunchImage */,
 				51522A2F1E2732DF00C6C3EE /* PinYin4Objc */,
 				515102201E1F68D800ED2E20 /* SDWebImage */,
 				515101FF1E1F68CB00ED2E20 /* Masonry */,
@@ -2569,6 +2588,25 @@
 			name = "测试用二级菜单";
 			sourceTree = "<group>";
 		};
+		51CFFAE11E289CA00068E2BC /* XWLaunchImage */ = {
+			isa = PBXGroup;
+			children = (
+				51CFFAE51E289D560068E2BC /* UIImage+XWLaunchImage.h */,
+				51CFFAE61E289D560068E2BC /* UIImage+XWLaunchImage.m */,
+				51CFFAE81E289EB00068E2BC /* XWAdModel.h */,
+				51CFFAE91E289EB00068E2BC /* XWAdModel.m */,
+				51CFFAEB1E289EE20068E2BC /* XWLaunchView.h */,
+				51CFFAEC1E289EE20068E2BC /* XWLaunchView.m */,
+				51CFFAEE1E289FB00068E2BC /* XWLaunchViewManager.h */,
+				51CFFAEF1E289FB00068E2BC /* XWLaunchViewManager.m */,
+				51CFFAF11E28A85D0068E2BC /* XWWebViewProgressView.h */,
+				51CFFAF21E28A85D0068E2BC /* XWWebViewProgressView.m */,
+				51CFFAF41E28A8EE0068E2BC /* XWAdViewController.h */,
+				51CFFAF51E28A8EE0068E2BC /* XWAdViewController.m */,
+			);
+			name = XWLaunchImage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3028,7 +3066,10 @@
 				51522A251E2721F800C6C3EE /* FriendModel.m in Sources */,
 				51522A1B1E271EBC00C6C3EE /* BaseTabbarController.m in Sources */,
 				515100E51E1F68AE00ED2E20 /* ChatKeyBoard.m in Sources */,
+				51CFFAF31E28A85D0068E2BC /* XWWebViewProgressView.m in Sources */,
 				515101F11E1F68AF00ED2E20 /* OfficialAccountToolbar.m in Sources */,
+				51CFFAE71E289D560068E2BC /* UIImage+XWLaunchImage.m in Sources */,
+				51CFFAED1E289EE20068E2BC /* XWLaunchView.m in Sources */,
 				5151FF0A1E1F66BB00ED2E20 /* AppDelegate.m in Sources */,
 				51522A471E2749FD00C6C3EE /* TestViewController.m in Sources */,
 				515101F01E1F68AF00ED2E20 /* ChatToolBar.m in Sources */,
@@ -3042,9 +3083,11 @@
 				5151021E1E1F68CB00ED2E20 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5151FF071E1F66BB00ED2E20 /* main.m in Sources */,
 				51522A1F1E271F3800C6C3EE /* ContactViewController.m in Sources */,
+				51CFFAF61E28A8EE0068E2BC /* XWAdViewController.m in Sources */,
 				515102471E1F68D800ED2E20 /* UIImage+GIF.m in Sources */,
 				51522A411E2732DF00C6C3EE /* PinyinFormatter.m in Sources */,
 				515102181E1F68CB00ED2E20 /* MASConstraint.m in Sources */,
+				51CFFAF01E289FB00068E2BC /* XWLaunchViewManager.m in Sources */,
 				515101F31E1F68AF00ED2E20 /* RFTextView.m in Sources */,
 				5151023F1E1F68D800ED2E20 /* SDImageCache.m in Sources */,
 				5151021C1E1F68CB00ED2E20 /* MASViewConstraint.m in Sources */,
@@ -3069,6 +3112,7 @@
 				515102401E1F68D800ED2E20 /* SDWebImageCompat.m in Sources */,
 				5151021A1E1F68CB00ED2E20 /* MASLayoutConstraint.m in Sources */,
 				5151FF471E1F688F00ED2E20 /* UITableView+FDIndexPathHeightCache.m in Sources */,
+				51CFFAEA1E289EB00068E2BC /* XWAdModel.m in Sources */,
 				515101E31E1F68AF00ED2E20 /* ChatToolBarItem.m in Sources */,
 				515102171E1F68CB00ED2E20 /* MASCompositeConstraint.m in Sources */,
 				515101E41E1F68AF00ED2E20 /* FaceThemeModel.m in Sources */,

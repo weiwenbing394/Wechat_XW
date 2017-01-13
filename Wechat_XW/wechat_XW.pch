@@ -17,6 +17,11 @@
 #define kAlmostZero         0.0000001
 #define kScreenWidth    [[UIScreen mainScreen] bounds].size.width
 #define kScreenHeight    [[UIScreen mainScreen] bounds].size.height
+#define kUserDefaults [NSUserDefaults standardUserDefaults]
+//广告图片地址
+#define adImageName  @"adImageName"
+//广告详情地址
+#define adDetailUrl  @"adDetailUrl"
 
 #import "Masonry.h"
 #import "UITableView+FDTemplateLayoutCell.h"

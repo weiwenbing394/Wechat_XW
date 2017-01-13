@@ -18,6 +18,8 @@
     [super viewDidLoad];
     self.title=self.userName;
     self.view.backgroundColor=[UIColor whiteColor];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

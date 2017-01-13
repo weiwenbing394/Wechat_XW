@@ -98,7 +98,7 @@
 
 #pragma mark - UISearchResultsUpdating
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    
+    NSLog(@"搜索条件为：%@",searchController.searchBar.text);
 }
 
 - (void)viewWillAppear:(BOOL)animated{
