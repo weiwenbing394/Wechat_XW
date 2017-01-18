@@ -12,7 +12,7 @@
 #import "SearchResultViewController.h"
 #import "TestViewController.h"
 
-@interface ContactViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate,SearchResultSelectedDelegate>{
+@interface ContactViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate,SearchResultSelectedDelegate,UISearchControllerDelegate>{
     //搜索controller
     UISearchController *searchController;
     //搜索结果Controller
@@ -31,6 +31,10 @@
 @property(nonatomic,strong) NSMutableDictionary *nameDic;
 //转换成汉子拼音的规则
 @property(nonatomic,strong) HanyuPinyinOutputFormat *formatter;
+//第一栏数组
+@property(nonatomic,strong) NSArray *firstSectionData;
+//搜索数组遮罩层
+@property(nonatomic,strong) UIView *blurView;
 
 @end
 
@@ -45,6 +49,7 @@
     self.nameDic=[NSMutableDictionary dictionary];
     [self initUI];
     [self loadAddressBookData];
+    friendTableView.tableFooterView=[self getFoodView];
     [searchController.view bringSubviewToFront:searchController.searchBar];
 }
 
@@ -58,21 +63,29 @@
     [friendTableView registerNib:[UINib nibWithNibName:NSStringFromClass([AddressBookCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([AddressBookCell class])];
     friendTableView.delegate=self;
     friendTableView.dataSource=self;
-    friendTableView.tableFooterView=[UIView new];
+    friendTableView.tableHeaderView=[self getSearchBarView];
+    
     //设置右边索引index的字体颜色和背景颜色
     friendTableView.sectionIndexBackgroundColor=[UIColor clearColor];
     friendTableView.sectionIndexColor=[UIColor darkGrayColor];
     [self.view addSubview:friendTableView];
+    
+}
+
+//搜索框
+- (UISearchBar *)getSearchBarView{
     //搜索结果控制器
     resultController=[[SearchResultViewController alloc]init];
     resultController.delegate=self;
     //搜索控制器
     searchController=[[UISearchController alloc]initWithSearchResultsController:resultController];
     searchController.searchResultsUpdater =resultController;
+    searchController.delegate=self;
     searchController.searchBar.placeholder=@"搜索";
     searchController.searchBar.tintColor=kThemeColor;
     searchController.searchBar.delegate=self;
     searchController.hidesNavigationBarDuringPresentation=YES;
+    searchController.dimsBackgroundDuringPresentation=NO;
     //设置searchBar的边框颜色，四周的颜色
     searchController.searchBar.barTintColor=[UIColor groupTableViewBackgroundColor];
     UIImageView *view=[[[searchController.searchBar.subviews objectAtIndex:0] subviews] firstObject];
@@ -82,7 +95,6 @@
     searchController.searchBar.showsBookmarkButton=YES;
     //把UISearchBar的右边图标替换为VoiceSearchStartBtn这个图标
     [searchController.searchBar setImage:[UIImage imageNamed:@"VoiceSearchStartBtn"] forSearchBarIcon:UISearchBarIconBookmark state:UIControlStateNormal];
-    friendTableView.tableHeaderView=searchController.searchBar;
     //解决iOS 8.4中searchBar看不到的bug
     UISearchBar *bar=searchController.searchBar;
     bar.barStyle=UIBarStyleDefault;
@@ -90,7 +102,23 @@
     CGRect rect=bar.frame;
     rect.size.height=44;
     bar.frame=rect;
+    return bar;
 }
+
+//获取tableviewfoot
+- (UIView *)getFoodView{
+    UIView* view = [[UIView alloc]
+                    initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+    UILabel* label = [[UILabel alloc] initWithFrame:view.bounds];
+    label.text = [NSString
+                  stringWithFormat:@"%lu位联系人 ",dataSource.count];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor lightGrayColor];
+    [view addSubview:label];
+    
+    return view;
+}
+
 
 //通讯里数据
 - (void)loadAddressBookData{
@@ -107,13 +135,16 @@
 #pragma mark tableView delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     if (tableView==friendTableView) {
-        return self.lettersArray.count;
+        return self.lettersArray.count+1;
     }
     return 0;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (tableView==friendTableView) {
-        NSArray *nameArray = [self.nameDic objectForKey:self.lettersArray[section]];
+        if (section==0) {
+            return self.firstSectionData.count;
+        }
+        NSArray *nameArray = [self.nameDic objectForKey:self.lettersArray[section-1]];
         return nameArray.count;
     }
     return 0;
@@ -123,39 +154,53 @@
     static NSString *identifer = @"AddressBookCell";
     AddressBookCell *cell = (AddressBookCell *)[tableView dequeueReusableCellWithIdentifier:identifer];
     if (tableView==friendTableView) {
-        if (dataSource.count) {
-            FriendModel *frends = [[self.nameDic objectForKey:[self.lettersArray objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+        if (indexPath.section==0&&self.firstSectionData.count) {
+            NSArray *array=self.firstSectionData[indexPath.row];
+            cell.nameLabel.text = array[1];
+            [cell.photoIV setImage:[UIImage imageNamed:array[0]]];
+            cell.photoIV.backgroundColor = [UIColor lightGrayColor];
+            cell.photoIV.clipsToBounds = YES;
+        }else if (dataSource.count) {
+            FriendModel *frends= [[self.nameDic objectForKey:[self.lettersArray objectAtIndex:indexPath.section-1]] objectAtIndex:indexPath.row];
             cell.nameLabel.text = frends.userName;
             [cell.photoIV sd_setImageWithURL:[NSURL URLWithString:frends.photo] placeholderImage:[UIImage imageNamed:@"default_portrait"]];
             cell.photoIV.backgroundColor = [UIColor lightGrayColor];
             cell.photoIV.clipsToBounds = YES;
         }
+        
     }
     return cell;
 }
 
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    FriendModel *friends;
+    
     if (tableView==friendTableView) {
-        friends = [[self.nameDic objectForKey:[self.lettersArray objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
-        TestViewController *test=[[TestViewController alloc]init];
-        test.hidesBottomBarWhenPushed=YES;
-        test.userName=friends.userName;
-        [self.navigationController pushViewController:test animated:YES];
-
+        if (indexPath.section==0) {
+            
+        }else{
+            FriendModel *friends = [[self.nameDic objectForKey:[self.lettersArray objectAtIndex:indexPath.section-1]] objectAtIndex:indexPath.row];
+            TestViewController *test=[[TestViewController alloc]init];
+            test.hidesBottomBarWhenPushed=YES;
+            test.userName=friends.userName;
+            [self.navigationController pushViewController:test animated:YES];
+        };
     }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (tableView==friendTableView) {
-        return 20.0;
+        return section==0?0:20.0;
     }
     return 0;
 }
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section==0) {
+        return nil;
+    }
     for (UIView *aView in friendTableView.subviews) {
         if ([aView isKindOfClass:NSClassFromString(@"UITableViewIndex")]) {
         }
@@ -163,7 +208,7 @@
             [self.view bringSubviewToFront:aView];
         }
     }
-    return [self.lettersArray objectAtIndex:section];
+    return [self.lettersArray objectAtIndex:section-1];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
@@ -190,6 +235,8 @@
 #pragma mark SearchResultSelectedDelegate  点击搜索结果的代理方法
 -(void)selectPersonWithUserId:(NSString *)userId userName:(NSString *)userName photo:(NSString *)photo phoneNO:(NSString *)phoneNO{
     searchController.searchBar.text = @"";
+    [self.blurView removeFromSuperview];
+    self.blurView=nil;
     TestViewController *test=[[TestViewController alloc]init];
     test.hidesBottomBarWhenPushed=YES;
     test.userName=userName;
@@ -241,6 +288,15 @@
     [searchBar resignFirstResponder];
 }
 
+#pragma mark searchControllerDelegate
+- (void)willPresentSearchController:(UISearchController *)searchController{
+    [self.view addSubview:self.blurView];
+};
+
+- (void)willDismissSearchController:(UISearchController *)searchController{
+    [self.blurView removeFromSuperview];
+    self.blurView=nil;
+};
 
 //处理通讯录元数据（排序筛选）
 - (void)handleLettersArray{
@@ -287,6 +343,28 @@
         _formatter.toneType=ToneTypeWithoutTone;
     }
     return _formatter;
+}
+
+- (NSArray *)firstSectionData{
+    if (!_firstSectionData) {
+        _firstSectionData = @[@[ @"plugins_FriendNotify", @"新的朋友" ],
+                                  @[ @"add_friend_icon_addgroup", @"群聊" ],
+                                  @[ @"Contact_icon_ContactTag", @"标签" ],
+                                  @[ @"add_friend_icon_offical", @"公众号" ]
+                                  ];
+    }
+    return _firstSectionData;
+}
+
+- (UIView *)blurView{
+    if (!_blurView) {
+        _blurView=[[UIView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight-64)];
+        UIBlurEffect *effect=[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        UIVisualEffectView *effectView=[[UIVisualEffectView alloc]initWithEffect:effect];
+        effectView.frame=_blurView.bounds;
+        [_blurView addSubview:effectView];
+    }
+    return _blurView;
 }
 
 

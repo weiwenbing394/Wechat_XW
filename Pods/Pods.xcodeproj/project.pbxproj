@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00530C759AA607A9921E21682E136AAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */; };
+		036EB24623ABD722CE202D15F4CFE241 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8DD4DBBBE9814966FA2747B536DC00 /* QuartzCore.framework */; };
+		168FF8EE6FD7D1B7356B5B2B05B68097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE088BE12675C2748B7E2A7AB4655E /* CoreGraphics.framework */; };
+		271E6F04EB585968CDE2EC48F5CE088F /* TTTAttributedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B86B292351620280ADD981B6005DA19 /* TTTAttributedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		384708321DBE81432E2CA77429C295B9 /* TTTAttributedLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E273FAA35AAABA0770B4D1FDC227D9BD /* TTTAttributedLabel-dummy.m */; };
+		5DD4F9DB53256446F58FEA83438C00A5 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFEE0E87F94F17E389A5CB71920FA1 /* TTTAttributedLabel.m */; };
+		6C91F6A2BB2FF6F3BB4B6ECE840F06D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BFE7B073D3BADAB1FD3267C395A2AE /* UIKit.framework */; };
+		A2044D1854D2FAD6E184D70D2ABB8581 /* Pods-Wechat_XW-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607C6DC964C35AE4BDB1990D34A09A4 /* Pods-Wechat_XW-dummy.m */; };
+		A8520EE2FC4766F26411690D52A159DD /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F408D1E8A61DA521CEA459A8269845F4 /* CoreText.framework */; };
+		CBFF3812DEE1E51CF7A50CCC640ECAEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE3100FB90AEFCAD4011F888A88C3089 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63C05B66535666AC471308A20EF72CA1;
+			remoteInfo = TTTAttributedLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2A2DD458DE56C04EE6F7002F8E3DD4C2 /* Pods-Wechat_XW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wechat_XW.release.xcconfig"; sourceTree = "<group>"; };
+		2F41368B0A8D2E8ADD91D77B1E210681 /* Pods-Wechat_XW-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wechat_XW-resources.sh"; sourceTree = "<group>"; };
+		4BA893B1CBB62D29587F7A5C160308DE /* Pods-Wechat_XW-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Wechat_XW-acknowledgements.plist"; sourceTree = "<group>"; };
+		5273FCC9E5C18F1E79DC34C8C4E13FC0 /* TTTAttributedLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTTAttributedLabel.xcconfig; sourceTree = "<group>"; };
+		5607C6DC964C35AE4BDB1990D34A09A4 /* Pods-Wechat_XW-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Wechat_XW-dummy.m"; sourceTree = "<group>"; };
+		6026C18BBE18D784EEBD65246B7241CA /* Pods-Wechat_XW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wechat_XW.debug.xcconfig"; sourceTree = "<group>"; };
+		7031385ADA7B2B3C3837C54AB03E2EC3 /* libTTTAttributedLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTTTAttributedLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BFE7B073D3BADAB1FD3267C395A2AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		81BE088BE12675C2748B7E2A7AB4655E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		8B8DD4DBBBE9814966FA2747B536DC00 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B86B292351620280ADD981B6005DA19 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = "<group>"; };
+		D18C15F596AA34FD3EF19279836323C7 /* Pods-Wechat_XW-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wechat_XW-frameworks.sh"; sourceTree = "<group>"; };
+		DCFFEE0E87F94F17E389A5CB71920FA1 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = "<group>"; };
+		DFA8F8B86849AA0646BB47E8EDF98F74 /* libPods-Wechat_XW.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wechat_XW.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E273FAA35AAABA0770B4D1FDC227D9BD /* TTTAttributedLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTTAttributedLabel-dummy.m"; sourceTree = "<group>"; };
+		E3FCB3EE7D0D80FC19042F0FC7D831D3 /* Pods-Wechat_XW-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Wechat_XW-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F408D1E8A61DA521CEA459A8269845F4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		FA8695A7BAE62D29F989B1F398293158 /* TTTAttributedLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTTAttributedLabel-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23F1A600026243A550587556FF647F1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168FF8EE6FD7D1B7356B5B2B05B68097 /* CoreGraphics.framework in Frameworks */,
+				A8520EE2FC4766F26411690D52A159DD /* CoreText.framework in Frameworks */,
+				00530C759AA607A9921E21682E136AAC /* Foundation.framework in Frameworks */,
+				036EB24623ABD722CE202D15F4CFE241 /* QuartzCore.framework in Frameworks */,
+				6C91F6A2BB2FF6F3BB4B6ECE840F06D7 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549C220882CB0E9E021258E06DCA7F6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFF3812DEE1E51CF7A50CCC640ECAEE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		140DDD7AA77E2A80ABD665C7B7AA225C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5273FCC9E5C18F1E79DC34C8C4E13FC0 /* TTTAttributedLabel.xcconfig */,
+				E273FAA35AAABA0770B4D1FDC227D9BD /* TTTAttributedLabel-dummy.m */,
+				FA8695A7BAE62D29F989B1F398293158 /* TTTAttributedLabel-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TTTAttributedLabel";
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98D8E1B8E5425B55732206F84F22DEC1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59B118E230AC76A3E034E732D9F2E0B4 /* Pods-Wechat_XW */ = {
+			isa = PBXGroup;
+			children = (
+				E3FCB3EE7D0D80FC19042F0FC7D831D3 /* Pods-Wechat_XW-acknowledgements.markdown */,
+				4BA893B1CBB62D29587F7A5C160308DE /* Pods-Wechat_XW-acknowledgements.plist */,
+				5607C6DC964C35AE4BDB1990D34A09A4 /* Pods-Wechat_XW-dummy.m */,
+				D18C15F596AA34FD3EF19279836323C7 /* Pods-Wechat_XW-frameworks.sh */,
+				2F41368B0A8D2E8ADD91D77B1E210681 /* Pods-Wechat_XW-resources.sh */,
+				6026C18BBE18D784EEBD65246B7241CA /* Pods-Wechat_XW.debug.xcconfig */,
+				2A2DD458DE56C04EE6F7002F8E3DD4C2 /* Pods-Wechat_XW.release.xcconfig */,
+			);
+			name = "Pods-Wechat_XW";
+			path = "Target Support Files/Pods-Wechat_XW";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				FC06AE555EA9FFC5AA21CB25EFBEEB6C /* Pods */,
+				84DBCC98B119517C2F5E3DA615706BC5 /* Products */,
+				B9FD6C9907BFC52B7AF261FA4FD3B2F6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		84DBCC98B119517C2F5E3DA615706BC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFA8F8B86849AA0646BB47E8EDF98F74 /* libPods-Wechat_XW.a */,
+				7031385ADA7B2B3C3837C54AB03E2EC3 /* libTTTAttributedLabel.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98D8E1B8E5425B55732206F84F22DEC1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				81BE088BE12675C2748B7E2A7AB4655E /* CoreGraphics.framework */,
+				F408D1E8A61DA521CEA459A8269845F4 /* CoreText.framework */,
+				23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */,
+				8B8DD4DBBBE9814966FA2747B536DC00 /* QuartzCore.framework */,
+				70BFE7B073D3BADAB1FD3267C395A2AE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B9FD6C9907BFC52B7AF261FA4FD3B2F6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				59B118E230AC76A3E034E732D9F2E0B4 /* Pods-Wechat_XW */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DCDD059A0AE73C2C70E52985B5DF6C5E /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				9B86B292351620280ADD981B6005DA19 /* TTTAttributedLabel.h */,
+				DCFFEE0E87F94F17E389A5CB71920FA1 /* TTTAttributedLabel.m */,
+				140DDD7AA77E2A80ABD665C7B7AA225C /* Support Files */,
+			);
+			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
+		FC06AE555EA9FFC5AA21CB25EFBEEB6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCDD059A0AE73C2C70E52985B5DF6C5E /* TTTAttributedLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8147E75B795589C1877F2DE18FB737E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271E6F04EB585968CDE2EC48F5CE088F /* TTTAttributedLabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		63C05B66535666AC471308A20EF72CA1 /* TTTAttributedLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BBE10422CAFC69F1C5DF7C615982E68 /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */;
+			buildPhases = (
+				618BD3B4A5D05C52A5BE79844A529A12 /* Sources */,
+				23F1A600026243A550587556FF647F1E /* Frameworks */,
+				8147E75B795589C1877F2DE18FB737E7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTTAttributedLabel;
+			productName = TTTAttributedLabel;
+			productReference = 7031385ADA7B2B3C3837C54AB03E2EC3 /* libTTTAttributedLabel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D8C363336C242A739E656195B43E3FFB /* Pods-Wechat_XW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 596145A076B15A81AE810127E8A34CFF /* Build configuration list for PBXNativeTarget "Pods-Wechat_XW" */;
+			buildPhases = (
+				47C1E8A2196D5ADFF6BF1742B58B234D /* Sources */,
+				549C220882CB0E9E021258E06DCA7F6C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB4D2162ECBF9C13E082450D00C99921 /* PBXTargetDependency */,
+			);
+			name = "Pods-Wechat_XW";
+			productName = "Pods-Wechat_XW";
+			productReference = DFA8F8B86849AA0646BB47E8EDF98F74 /* libPods-Wechat_XW.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 84DBCC98B119517C2F5E3DA615706BC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8C363336C242A739E656195B43E3FFB /* Pods-Wechat_XW */,
+				63C05B66535666AC471308A20EF72CA1 /* TTTAttributedLabel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47C1E8A2196D5ADFF6BF1742B58B234D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2044D1854D2FAD6E184D70D2ABB8581 /* Pods-Wechat_XW-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618BD3B4A5D05C52A5BE79844A529A12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				384708321DBE81432E2CA77429C295B9 /* TTTAttributedLabel-dummy.m in Sources */,
+				5DD4F9DB53256446F58FEA83438C00A5 /* TTTAttributedLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB4D2162ECBF9C13E082450D00C99921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTTAttributedLabel;
+			target = 63C05B66535666AC471308A20EF72CA1 /* TTTAttributedLabel */;
+			targetProxy = EE3100FB90AEFCAD4011F888A88C3089 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		97FBB109BA5DCE221BDAFBD12DE4EDE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5273FCC9E5C18F1E79DC34C8C4E13FC0 /* TTTAttributedLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBE78B6C22F3D5F1A6ABB8F62F1AD765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5273FCC9E5C18F1E79DC34C8C4E13FC0 /* TTTAttributedLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D343170C3D06B7F77F8DE624B50BA6A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A2DD458DE56C04EE6F7002F8E3DD4C2 /* Pods-Wechat_XW.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FFDB2881C5B75EDEFA82233F1D84AC86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6026C18BBE18D784EEBD65246B7241CA /* Pods-Wechat_XW.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		596145A076B15A81AE810127E8A34CFF /* Build configuration list for PBXNativeTarget "Pods-Wechat_XW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDB2881C5B75EDEFA82233F1D84AC86 /* Debug */,
+				D343170C3D06B7F77F8DE624B50BA6A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BBE10422CAFC69F1C5DF7C615982E68 /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBE78B6C22F3D5F1A6ABB8F62F1AD765 /* Debug */,
+				97FBB109BA5DCE221BDAFBD12DE4EDE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -311,6 +311,26 @@
 		5151024A1E1F68D800ED2E20 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151023B1E1F68D800ED2E20 /* UIImageView+WebCache.m */; };
 		5151024B1E1F68D800ED2E20 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151023D1E1F68D800ED2E20 /* UIView+WebCacheOperation.m */; };
 		5151024D1E1F68F700ED2E20 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5151024C1E1F68F700ED2E20 /* data.json */; };
+		5151FC6A1E2CAE4F00A73224 /* chatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FC691E2CAE4F00A73224 /* chatViewController.m */; };
+		5151FC6E1E2CB77700A73224 /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FC6D1E2CB77700A73224 /* ContactsTableViewCell.m */; };
+		5151FC721E2CBD6100A73224 /* UIImage+RandomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FC711E2CBD6100A73224 /* UIImage+RandomImage.m */; };
+		5151FC761E2DC1E000A73224 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FC751E2DC1E000A73224 /* DateUtil.m */; };
+		5151FC811E2DCA8100A73224 /* EditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FC7F1E2DCA8100A73224 /* EditorView.m */; };
+		5151FC821E2DCA8100A73224 /* EditorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151FC801E2DCA8100A73224 /* EditorView.xib */; };
+		5151FC851E2DE54F00A73224 /* ChatroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FC841E2DE54F00A73224 /* ChatroomViewController.m */; };
+		5151FC8C1E2DF67F00A73224 /* Messages.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FC8B1E2DF67F00A73224 /* Messages.m */; };
+		5151FC8F1E2DF76900A73224 /* InsetsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FC8E1E2DF76900A73224 /* InsetsTextField.m */; };
+		5151FCB01E2E28EA00A73224 /* BaseMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCAC1E2E28EA00A73224 /* BaseMessageTableViewCell.m */; };
+		5151FCB11E2E28EA00A73224 /* TextMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCAF1E2E28EA00A73224 /* TextMessageTableViewCell.m */; };
+		5151FCBC1E2F539E00A73224 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCB51E2F539E00A73224 /* UITableView+FDIndexPathHeightCache.m */; };
+		5151FCBD1E2F539E00A73224 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCB71E2F539E00A73224 /* UITableView+FDKeyedHeightCache.m */; };
+		5151FCBE1E2F539E00A73224 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCB91E2F539E00A73224 /* UITableView+FDTemplateLayoutCell.m */; };
+		5151FCBF1E2F539E00A73224 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCBB1E2F539E00A73224 /* UITableView+FDTemplateLayoutCellDebug.m */; };
+		5151FCCD1E2F6EC100A73224 /* CoverHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCCB1E2F6EC100A73224 /* CoverHeaderView.m */; };
+		5151FCCE1E2F6EC100A73224 /* CoverHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151FCCC1E2F6EC100A73224 /* CoverHeaderView.xib */; };
+		5151FCD21E2F780000A73224 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCD11E2F780000A73224 /* MeViewController.m */; };
+		5151FCD61E2F784F00A73224 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCD51E2F784F00A73224 /* MeTableViewCell.m */; };
+		5151FCDA1E2F786400A73224 /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FCD91E2F786400A73224 /* PersonModel.m */; };
 		5151FF071E1F66BB00ED2E20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FF061E1F66BB00ED2E20 /* main.m */; };
 		5151FF0A1E1F66BB00ED2E20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FF091E1F66BB00ED2E20 /* AppDelegate.m */; };
 		5151FF0D1E1F66BB00ED2E20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FF0C1E1F66BB00ED2E20 /* ViewController.m */; };
@@ -319,10 +339,6 @@
 		5151FF151E1F66BB00ED2E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5151FF131E1F66BB00ED2E20 /* LaunchScreen.storyboard */; };
 		5151FF201E1F66BB00ED2E20 /* Wechat_XWTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FF1F1E1F66BB00ED2E20 /* Wechat_XWTests.m */; };
 		5151FF2B1E1F66BB00ED2E20 /* Wechat_XWUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FF2A1E1F66BB00ED2E20 /* Wechat_XWUITests.m */; };
-		5151FF471E1F688F00ED2E20 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FF401E1F688F00ED2E20 /* UITableView+FDIndexPathHeightCache.m */; };
-		5151FF481E1F688F00ED2E20 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FF421E1F688F00ED2E20 /* UITableView+FDKeyedHeightCache.m */; };
-		5151FF491E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FF441E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCell.m */; };
-		5151FF4A1E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151FF461E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCellDebug.m */; };
 		515229E01E271AA100C6C3EE /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 515229A81E271AA000C6C3EE /* avatar@2x.png */; };
 		515229E11E271AA100C6C3EE /* avatar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 515229A91E271AA000C6C3EE /* avatar@3x.png */; };
 		515229E21E271AA100C6C3EE /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 515229AB1E271AA000C6C3EE /* 0.jpg */; };
@@ -396,6 +412,7 @@
 		51CFFAF01E289FB00068E2BC /* XWLaunchViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CFFAEF1E289FB00068E2BC /* XWLaunchViewManager.m */; };
 		51CFFAF31E28A85D0068E2BC /* XWWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CFFAF21E28A85D0068E2BC /* XWWebViewProgressView.m */; };
 		51CFFAF61E28A8EE0068E2BC /* XWAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CFFAF51E28A8EE0068E2BC /* XWAdViewController.m */; };
+		F4A69E3D89E2A43189773227 /* libPods-Wechat_XW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF67E474B254A7F2898396FD /* libPods-Wechat_XW.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -648,6 +665,44 @@
 		5151023C1E1F68D800ED2E20 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		5151023D1E1F68D800ED2E20 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		5151024C1E1F68F700ED2E20 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		5151FC681E2CAE4F00A73224 /* chatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatViewController.h; sourceTree = "<group>"; };
+		5151FC691E2CAE4F00A73224 /* chatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatViewController.m; sourceTree = "<group>"; };
+		5151FC6C1E2CB77700A73224 /* ContactsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewCell.h; sourceTree = "<group>"; };
+		5151FC6D1E2CB77700A73224 /* ContactsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewCell.m; sourceTree = "<group>"; };
+		5151FC701E2CBD6100A73224 /* UIImage+RandomImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RandomImage.h"; sourceTree = "<group>"; };
+		5151FC711E2CBD6100A73224 /* UIImage+RandomImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RandomImage.m"; sourceTree = "<group>"; };
+		5151FC741E2DC1E000A73224 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		5151FC751E2DC1E000A73224 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		5151FC7E1E2DCA8100A73224 /* EditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorView.h; sourceTree = "<group>"; };
+		5151FC7F1E2DCA8100A73224 /* EditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorView.m; sourceTree = "<group>"; };
+		5151FC801E2DCA8100A73224 /* EditorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorView.xib; sourceTree = "<group>"; };
+		5151FC831E2DE54F00A73224 /* ChatroomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatroomViewController.h; sourceTree = "<group>"; };
+		5151FC841E2DE54F00A73224 /* ChatroomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatroomViewController.m; sourceTree = "<group>"; };
+		5151FC8A1E2DF67F00A73224 /* Messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
+		5151FC8B1E2DF67F00A73224 /* Messages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messages.m; sourceTree = "<group>"; };
+		5151FC8D1E2DF76900A73224 /* InsetsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsetsTextField.h; sourceTree = "<group>"; };
+		5151FC8E1E2DF76900A73224 /* InsetsTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsetsTextField.m; sourceTree = "<group>"; };
+		5151FCAC1E2E28EA00A73224 /* BaseMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMessageTableViewCell.m; sourceTree = "<group>"; };
+		5151FCAD1E2E28EA00A73224 /* TextMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMessageTableViewCell.h; sourceTree = "<group>"; };
+		5151FCAE1E2E28EA00A73224 /* BaseMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMessageTableViewCell.h; sourceTree = "<group>"; };
+		5151FCAF1E2E28EA00A73224 /* TextMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessageTableViewCell.m; sourceTree = "<group>"; };
+		5151FCB41E2F539E00A73224 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		5151FCB51E2F539E00A73224 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		5151FCB61E2F539E00A73224 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		5151FCB71E2F539E00A73224 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		5151FCB81E2F539E00A73224 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		5151FCB91E2F539E00A73224 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		5151FCBA1E2F539E00A73224 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		5151FCBB1E2F539E00A73224 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
+		5151FCCA1E2F6EC100A73224 /* CoverHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverHeaderView.h; sourceTree = "<group>"; };
+		5151FCCB1E2F6EC100A73224 /* CoverHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverHeaderView.m; sourceTree = "<group>"; };
+		5151FCCC1E2F6EC100A73224 /* CoverHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverHeaderView.xib; sourceTree = "<group>"; };
+		5151FCD01E2F780000A73224 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		5151FCD11E2F780000A73224 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		5151FCD41E2F784F00A73224 /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
+		5151FCD51E2F784F00A73224 /* MeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeTableViewCell.m; sourceTree = "<group>"; };
+		5151FCD81E2F786400A73224 /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		5151FCD91E2F786400A73224 /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
 		5151FF021E1F66BB00ED2E20 /* Wechat_XW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wechat_XW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5151FF061E1F66BB00ED2E20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5151FF081E1F66BB00ED2E20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -664,14 +719,6 @@
 		5151FF261E1F66BB00ED2E20 /* Wechat_XWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wechat_XWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5151FF2A1E1F66BB00ED2E20 /* Wechat_XWUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wechat_XWUITests.m; sourceTree = "<group>"; };
 		5151FF2C1E1F66BB00ED2E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5151FF3F1E1F688F00ED2E20 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
-		5151FF401E1F688F00ED2E20 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
-		5151FF411E1F688F00ED2E20 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
-		5151FF421E1F688F00ED2E20 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
-		5151FF431E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
-		5151FF441E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
-		5151FF451E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
-		5151FF461E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		5151FF4D1E1F68AE00ED2E20 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
 		5151FF4E1E1F68AE00ED2E20 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
 		5151FF4F1E1F68AE00ED2E20 /* ChatKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatKeyBoard.h; sourceTree = "<group>"; };
@@ -891,6 +938,9 @@
 		51CFFAF21E28A85D0068E2BC /* XWWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWWebViewProgressView.m; sourceTree = "<group>"; };
 		51CFFAF41E28A8EE0068E2BC /* XWAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWAdViewController.h; sourceTree = "<group>"; };
 		51CFFAF51E28A8EE0068E2BC /* XWAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWAdViewController.m; sourceTree = "<group>"; };
+		862FF0E3B54F3C01CABF6BED /* Pods-Wechat_XW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wechat_XW.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wechat_XW/Pods-Wechat_XW.debug.xcconfig"; sourceTree = "<group>"; };
+		AB3F79A8E8A7ECA0334D45DB /* Pods-Wechat_XW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wechat_XW.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wechat_XW/Pods-Wechat_XW.release.xcconfig"; sourceTree = "<group>"; };
+		FF67E474B254A7F2898396FD /* libPods-Wechat_XW.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wechat_XW.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -898,6 +948,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A69E3D89E2A43189773227 /* libPods-Wechat_XW.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1629,6 +1680,121 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		5151FC671E2CAE3600A73224 /* 聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				5151FC681E2CAE4F00A73224 /* chatViewController.h */,
+				5151FC691E2CAE4F00A73224 /* chatViewController.m */,
+				5151FC831E2DE54F00A73224 /* ChatroomViewController.h */,
+				5151FC841E2DE54F00A73224 /* ChatroomViewController.m */,
+			);
+			name = "聊天";
+			sourceTree = "<group>";
+		};
+		5151FC6B1E2CB76800A73224 /* 聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				5151FC781E2DCA1900A73224 /* 聊天室 */,
+				5151FC771E2DCA0E00A73224 /* 列表 */,
+			);
+			name = "聊天";
+			sourceTree = "<group>";
+		};
+		5151FC6F1E2CBCF500A73224 /* Catagory */ = {
+			isa = PBXGroup;
+			children = (
+				5151FC701E2CBD6100A73224 /* UIImage+RandomImage.h */,
+				5151FC711E2CBD6100A73224 /* UIImage+RandomImage.m */,
+			);
+			name = Catagory;
+			sourceTree = "<group>";
+		};
+		5151FC731E2DC1AC00A73224 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5151FC741E2DC1E000A73224 /* DateUtil.h */,
+				5151FC751E2DC1E000A73224 /* DateUtil.m */,
+				5151FC8D1E2DF76900A73224 /* InsetsTextField.h */,
+				5151FC8E1E2DF76900A73224 /* InsetsTextField.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		5151FC771E2DCA0E00A73224 /* 列表 */ = {
+			isa = PBXGroup;
+			children = (
+				5151FC6C1E2CB77700A73224 /* ContactsTableViewCell.h */,
+				5151FC6D1E2CB77700A73224 /* ContactsTableViewCell.m */,
+			);
+			name = "列表";
+			sourceTree = "<group>";
+		};
+		5151FC781E2DCA1900A73224 /* 聊天室 */ = {
+			isa = PBXGroup;
+			children = (
+				5151FC7E1E2DCA8100A73224 /* EditorView.h */,
+				5151FC7F1E2DCA8100A73224 /* EditorView.m */,
+				5151FC801E2DCA8100A73224 /* EditorView.xib */,
+				5151FCAE1E2E28EA00A73224 /* BaseMessageTableViewCell.h */,
+				5151FCAC1E2E28EA00A73224 /* BaseMessageTableViewCell.m */,
+				5151FCAD1E2E28EA00A73224 /* TextMessageTableViewCell.h */,
+				5151FCAF1E2E28EA00A73224 /* TextMessageTableViewCell.m */,
+			);
+			name = "聊天室";
+			sourceTree = "<group>";
+		};
+		5151FC891E2DF66C00A73224 /* 聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				5151FC8A1E2DF67F00A73224 /* Messages.h */,
+				5151FC8B1E2DF67F00A73224 /* Messages.m */,
+			);
+			name = "聊天";
+			sourceTree = "<group>";
+		};
+		5151FCB31E2F539E00A73224 /* FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				5151FCB41E2F539E00A73224 /* UITableView+FDIndexPathHeightCache.h */,
+				5151FCB51E2F539E00A73224 /* UITableView+FDIndexPathHeightCache.m */,
+				5151FCB61E2F539E00A73224 /* UITableView+FDKeyedHeightCache.h */,
+				5151FCB71E2F539E00A73224 /* UITableView+FDKeyedHeightCache.m */,
+				5151FCB81E2F539E00A73224 /* UITableView+FDTemplateLayoutCell.h */,
+				5151FCB91E2F539E00A73224 /* UITableView+FDTemplateLayoutCell.m */,
+				5151FCBA1E2F539E00A73224 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				5151FCBB1E2F539E00A73224 /* UITableView+FDTemplateLayoutCellDebug.m */,
+			);
+			name = FDTemplateLayoutCell;
+			path = "未命名文件夹";
+			sourceTree = "<group>";
+		};
+		5151FCCF1E2F77F400A73224 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				5151FCD01E2F780000A73224 /* MeViewController.h */,
+				5151FCD11E2F780000A73224 /* MeViewController.m */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
+		5151FCD31E2F784000A73224 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				5151FCD41E2F784F00A73224 /* MeTableViewCell.h */,
+				5151FCD51E2F784F00A73224 /* MeTableViewCell.m */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
+		5151FCD71E2F785500A73224 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				5151FCD81E2F786400A73224 /* PersonModel.h */,
+				5151FCD91E2F786400A73224 /* PersonModel.m */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
 		5151FEF91E1F66BB00ED2E20 = {
 			isa = PBXGroup;
 			children = (
@@ -1636,6 +1802,8 @@
 				5151FF1E1E1F66BB00ED2E20 /* Wechat_XWTests */,
 				5151FF291E1F66BB00ED2E20 /* Wechat_XWUITests */,
 				5151FF031E1F66BB00ED2E20 /* Products */,
+				C432818392425710D04CF1F3 /* Pods */,
+				A810481128096D0ECC4E296D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1652,6 +1820,8 @@
 		5151FF041E1F66BB00ED2E20 /* Wechat_XW */ = {
 			isa = PBXGroup;
 			children = (
+				5151FC731E2DC1AC00A73224 /* Utility */,
+				5151FC6F1E2CBCF500A73224 /* Catagory */,
 				5151FF3A1E1F683700ED2E20 /* Class */,
 				5151FF391E1F682A00ED2E20 /* Data */,
 				5151FF381E1F681A00ED2E20 /* ThirdLib */,
@@ -1697,13 +1867,13 @@
 		5151FF381E1F681A00ED2E20 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				5151FCB31E2F539E00A73224 /* FDTemplateLayoutCell */,
 				51CFFAE11E289CA00068E2BC /* XWLaunchImage */,
 				51522A2F1E2732DF00C6C3EE /* PinYin4Objc */,
 				515102201E1F68D800ED2E20 /* SDWebImage */,
 				515101FF1E1F68CB00ED2E20 /* Masonry */,
 				515101F41E1F68C100ED2E20 /* SDPhotoBrowser */,
 				5151FF4B1E1F68AE00ED2E20 /* KeyBoard */,
-				5151FF3E1E1F688200ED2E20 /* FDTemplateLayoutCell */,
 			);
 			name = ThirdLib;
 			sourceTree = "<group>";
@@ -1730,6 +1900,8 @@
 		5151FF3B1E1F684300ED2E20 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5151FCCF1E2F77F400A73224 /* 我的 */,
+				5151FC671E2CAE3600A73224 /* 聊天 */,
 				51522A441E2749DF00C6C3EE /* 测试用二级菜单 */,
 				51522A181E271E8000C6C3EE /* BaseTabbarController */,
 				51522A1C1E271F1500C6C3EE /* 通讯录 */,
@@ -1741,6 +1913,8 @@
 		5151FF3C1E1F684C00ED2E20 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5151FCD71E2F785500A73224 /* 我的 */,
+				5151FC891E2DF66C00A73224 /* 聊天 */,
 				51522A221E2721E100C6C3EE /* 通讯录 */,
 				51522A171E271E7200C6C3EE /* 朋友圈 */,
 			);
@@ -1750,25 +1924,12 @@
 		5151FF3D1E1F685400ED2E20 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5151FCD31E2F784000A73224 /* 我的 */,
+				5151FC6B1E2CB76800A73224 /* 聊天 */,
 				51522A261E2722C400C6C3EE /* 通讯录 */,
 				51522A161E271E6600C6C3EE /* 朋友圈 */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		5151FF3E1E1F688200ED2E20 /* FDTemplateLayoutCell */ = {
-			isa = PBXGroup;
-			children = (
-				5151FF3F1E1F688F00ED2E20 /* UITableView+FDIndexPathHeightCache.h */,
-				5151FF401E1F688F00ED2E20 /* UITableView+FDIndexPathHeightCache.m */,
-				5151FF411E1F688F00ED2E20 /* UITableView+FDKeyedHeightCache.h */,
-				5151FF421E1F688F00ED2E20 /* UITableView+FDKeyedHeightCache.m */,
-				5151FF431E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCell.h */,
-				5151FF441E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCell.m */,
-				5151FF451E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCellDebug.h */,
-				5151FF461E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCellDebug.m */,
-			);
-			name = FDTemplateLayoutCell;
 			sourceTree = "<group>";
 		};
 		5151FF4B1E1F68AE00ED2E20 /* KeyBoard */ = {
@@ -2490,6 +2651,9 @@
 				51332E3C1E233972004549EB /* CommentCell.m */,
 				51332E461E2359E2004549EB /* MessageCell.h */,
 				51332E471E2359E2004549EB /* MessageCell.m */,
+				5151FCCA1E2F6EC100A73224 /* CoverHeaderView.h */,
+				5151FCCB1E2F6EC100A73224 /* CoverHeaderView.m */,
+				5151FCCC1E2F6EC100A73224 /* CoverHeaderView.xib */,
 			);
 			name = "朋友圈";
 			sourceTree = "<group>";
@@ -2607,6 +2771,23 @@
 			name = XWLaunchImage;
 			sourceTree = "<group>";
 		};
+		A810481128096D0ECC4E296D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF67E474B254A7F2898396FD /* libPods-Wechat_XW.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C432818392425710D04CF1F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				862FF0E3B54F3C01CABF6BED /* Pods-Wechat_XW.debug.xcconfig */,
+				AB3F79A8E8A7ECA0334D45DB /* Pods-Wechat_XW.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2614,9 +2795,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5151FF2F1E1F66BB00ED2E20 /* Build configuration list for PBXNativeTarget "Wechat_XW" */;
 			buildPhases = (
+				21BDE7873353C82F7A352EC7 /* [CP] Check Pods Manifest.lock */,
 				5151FEFE1E1F66BB00ED2E20 /* Sources */,
 				5151FEFF1E1F66BB00ED2E20 /* Frameworks */,
 				5151FF001E1F66BB00ED2E20 /* Resources */,
+				7F51B501B20353B1BAF882F1 /* [CP] Embed Pods Frameworks */,
+				372B5D142E92FBFFFD1CAE6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2789,6 +2973,7 @@
 				515101471E1F68AF00ED2E20 /* f_static_033@2x.png in Resources */,
 				5151010F1E1F68AF00ED2E20 /* f_static_005@3x.png in Resources */,
 				515101651E1F68AF00ED2E20 /* f_static_048@2x.png in Resources */,
+				5151FCCE1E2F6EC100A73224 /* CoverHeaderView.xib in Resources */,
 				515101CA1E1F68AF00ED2E20 /* f_static_098@3x.png in Resources */,
 				51522A081E271AA100C6C3EE /* test4.jpg in Resources */,
 				515101271E1F68AF00ED2E20 /* f_static_017@2x.png in Resources */,
@@ -2930,6 +3115,7 @@
 				515100EB1E1F68AE00ED2E20 /* input-bar-flat@3x.png in Resources */,
 				515101941E1F68AF00ED2E20 /* f_static_071@3x.png in Resources */,
 				515101121E1F68AF00ED2E20 /* Contents.json in Resources */,
+				5151FC821E2DCA8100A73224 /* EditorView.xib in Resources */,
 				515101A11E1F68AF00ED2E20 /* f_static_078@2x.png in Resources */,
 				5151013A1E1F68AF00ED2E20 /* f_static_026@3x.png in Resources */,
 				515101241E1F68AF00ED2E20 /* f_static_015@3x.png in Resources */,
@@ -3049,6 +3235,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21BDE7873353C82F7A352EC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		372B5D142E92FBFFFD1CAE6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wechat_XW/Pods-Wechat_XW-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F51B501B20353B1BAF882F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wechat_XW/Pods-Wechat_XW-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5151FEFE1E1F66BB00ED2E20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -3057,10 +3291,12 @@
 				51522A421E2732DF00C6C3EE /* PinyinHelper.m in Sources */,
 				515101FC1E1F68C100ED2E20 /* SDBrowserImageView.m in Sources */,
 				5151FF0D1E1F66BB00ED2E20 /* ViewController.m in Sources */,
-				5151FF4A1E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				515101EE1E1F68AF00ED2E20 /* PanelBottomView.m in Sources */,
 				515101ED1E1F68AF00ED2E20 /* FaceThemeView.m in Sources */,
+				5151FCD61E2F784F00A73224 /* MeTableViewCell.m in Sources */,
+				5151FC761E2DC1E000A73224 /* DateUtil.m in Sources */,
 				51522A3E1E2732DF00C6C3EE /* ChineseToPinyinResource.m in Sources */,
+				5151FCB01E2E28EA00A73224 /* BaseMessageTableViewCell.m in Sources */,
 				5151021D1E1F68CB00ED2E20 /* NSArray+MASAdditions.m in Sources */,
 				515100E41E1F68AE00ED2E20 /* NSString+Emoji.m in Sources */,
 				51522A251E2721F800C6C3EE /* FriendModel.m in Sources */,
@@ -3068,15 +3304,19 @@
 				515100E51E1F68AE00ED2E20 /* ChatKeyBoard.m in Sources */,
 				51CFFAF31E28A85D0068E2BC /* XWWebViewProgressView.m in Sources */,
 				515101F11E1F68AF00ED2E20 /* OfficialAccountToolbar.m in Sources */,
+				5151FC721E2CBD6100A73224 /* UIImage+RandomImage.m in Sources */,
 				51CFFAE71E289D560068E2BC /* UIImage+XWLaunchImage.m in Sources */,
+				5151FCD21E2F780000A73224 /* MeViewController.m in Sources */,
 				51CFFAED1E289EE20068E2BC /* XWLaunchView.m in Sources */,
 				5151FF0A1E1F66BB00ED2E20 /* AppDelegate.m in Sources */,
 				51522A471E2749FD00C6C3EE /* TestViewController.m in Sources */,
 				515101F01E1F68AF00ED2E20 /* ChatToolBar.m in Sources */,
 				515101FD1E1F68C100ED2E20 /* SDPhotoBrowser.m in Sources */,
 				515102191E1F68CB00ED2E20 /* MASConstraintMaker.m in Sources */,
+				5151FCDA1E2F786400A73224 /* PersonModel.m in Sources */,
 				515102411E1F68D800ED2E20 /* SDWebImageDecoder.m in Sources */,
 				5151021F1E1F68CB00ED2E20 /* View+MASAdditions.m in Sources */,
+				5151FCCD1E2F6EC100A73224 /* CoverHeaderView.m in Sources */,
 				51332E481E2359E2004549EB /* MessageCell.m in Sources */,
 				515102441E1F68D800ED2E20 /* SDWebImageManager.m in Sources */,
 				515102491E1F68D800ED2E20 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -3086,6 +3326,7 @@
 				51CFFAF61E28A8EE0068E2BC /* XWAdViewController.m in Sources */,
 				515102471E1F68D800ED2E20 /* UIImage+GIF.m in Sources */,
 				51522A411E2732DF00C6C3EE /* PinyinFormatter.m in Sources */,
+				5151FCBD1E2F539E00A73224 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				515102181E1F68CB00ED2E20 /* MASConstraint.m in Sources */,
 				51CFFAF01E289FB00068E2BC /* XWLaunchViewManager.m in Sources */,
 				515101F31E1F68AF00ED2E20 /* RFTextView.m in Sources */,
@@ -3094,36 +3335,43 @@
 				51332E371E2332A7004549EB /* CommentModel.m in Sources */,
 				515102431E1F68D800ED2E20 /* SDWebImageDownloaderOperation.m in Sources */,
 				515101F21E1F68AF00ED2E20 /* RFRecordButton.m in Sources */,
+				5151FC8C1E2DF67F00A73224 /* Messages.m in Sources */,
 				5151024A1E1F68D800ED2E20 /* UIImageView+WebCache.m in Sources */,
 				515101EF1E1F68AF00ED2E20 /* MorePanel.m in Sources */,
 				51522A2A1E2722E000C6C3EE /* AddressBookCell.m in Sources */,
+				5151FCBF1E2F539E00A73224 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				515102461E1F68D800ED2E20 /* UIButton+WebCache.m in Sources */,
 				515101E91E1F68AF00ED2E20 /* FaceButton.m in Sources */,
+				5151FCBE1E2F539E00A73224 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				51522A401E2732DF00C6C3EE /* NSString+PinYin4Cocoa.m in Sources */,
 				515102421E1F68D800ED2E20 /* SDWebImageDownloader.m in Sources */,
 				5151023E1E1F68D800ED2E20 /* NSData+ImageContentType.m in Sources */,
-				5151FF491E1F688F00ED2E20 /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				5151FCBC1E2F539E00A73224 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				515101EA1E1F68AF00ED2E20 /* FacePageView.m in Sources */,
+				5151FC851E2DE54F00A73224 /* ChatroomViewController.m in Sources */,
+				5151FC6E1E2CB77700A73224 /* ContactsTableViewCell.m in Sources */,
 				515101EC1E1F68AF00ED2E20 /* FaceSourceManager.m in Sources */,
 				515101E51E1F68AF00ED2E20 /* MoreItem.m in Sources */,
 				5151021B1E1F68CB00ED2E20 /* MASViewAttribute.m in Sources */,
+				5151FC8F1E2DF76900A73224 /* InsetsTextField.m in Sources */,
 				515102451E1F68D800ED2E20 /* SDWebImagePrefetcher.m in Sources */,
 				515102481E1F68D800ED2E20 /* UIImage+MultiFormat.m in Sources */,
 				515102401E1F68D800ED2E20 /* SDWebImageCompat.m in Sources */,
 				5151021A1E1F68CB00ED2E20 /* MASLayoutConstraint.m in Sources */,
-				5151FF471E1F688F00ED2E20 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				51CFFAEA1E289EB00068E2BC /* XWAdModel.m in Sources */,
 				515101E31E1F68AF00ED2E20 /* ChatToolBarItem.m in Sources */,
 				515102171E1F68CB00ED2E20 /* MASCompositeConstraint.m in Sources */,
 				515101E41E1F68AF00ED2E20 /* FaceThemeModel.m in Sources */,
+				5151FC6A1E2CAE4F00A73224 /* chatViewController.m in Sources */,
 				5151024B1E1F68D800ED2E20 /* UIView+WebCacheOperation.m in Sources */,
 				51522A3F1E2732DF00C6C3EE /* HanyuPinyinOutputFormat.m in Sources */,
 				515101FE1E1F68C100ED2E20 /* SDWaitingView.m in Sources */,
+				5151FC811E2DCA8100A73224 /* EditorView.m in Sources */,
+				5151FCB11E2E28EA00A73224 /* TextMessageTableViewCell.m in Sources */,
 				51332E3D1E233972004549EB /* CommentCell.m in Sources */,
 				51522A2E1E27251700C6C3EE /* SearchResultViewController.m in Sources */,
 				51332E341E233292004549EB /* MessageModel.m in Sources */,
 				515101EB1E1F68AF00ED2E20 /* FacePanel.m in Sources */,
-				5151FF481E1F688F00ED2E20 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				51332E3A1E233582004549EB /* JGGView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3269,6 +3517,7 @@
 		};
 		5151FF301E1F66BB00ED2E20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 862FF0E3B54F3C01CABF6BED /* Pods-Wechat_XW.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D3S96SQKWE;
@@ -3283,6 +3532,7 @@
 		};
 		5151FF311E1F66BB00ED2E20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3F79A8E8A7ECA0334D45DB /* Pods-Wechat_XW.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D3S96SQKWE;

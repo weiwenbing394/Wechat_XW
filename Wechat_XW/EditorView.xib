@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jFW-Zv-PbP" customClass="EditorView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vK4-I4-EUQ">
+                    <rect key="frame" x="8" y="12" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="CEE-Qn-bQ8"/>
+                        <constraint firstAttribute="width" constant="28" id="TRb-iQ-BLC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" image="chat_setmode_voice_btn_normal"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7r-WM-jWs">
+                    <rect key="frame" x="342" y="12" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="FVZ-Q2-QUi"/>
+                        <constraint firstAttribute="height" constant="28" id="Kcq-aE-BBH"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="Album_ToolViewEmotion"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgS-3w-puL">
+                    <rect key="frame" x="378" y="12" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="Lnq-W9-luD"/>
+                        <constraint firstAttribute="width" constant="28" id="RId-BD-kCM"/>
+                    </constraints>
+                    <state key="normal" image="chat_setmode_add_btn_normal"/>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y3s-Hi-Fjg">
+                    <rect key="frame" x="44" y="8" width="290" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="y3s-Hi-Fjg" firstAttribute="leading" secondItem="vK4-I4-EUQ" secondAttribute="trailing" constant="8" id="Kpe-1a-fPX"/>
+                <constraint firstItem="y3s-Hi-Fjg" firstAttribute="top" secondItem="jFW-Zv-PbP" secondAttribute="top" constant="8" id="MpP-pT-nvr"/>
+                <constraint firstItem="vK4-I4-EUQ" firstAttribute="leading" secondItem="jFW-Zv-PbP" secondAttribute="leading" constant="8" id="MwG-M7-UTT"/>
+                <constraint firstAttribute="bottom" secondItem="y3s-Hi-Fjg" secondAttribute="bottom" constant="8" id="bg1-y7-VUy"/>
+                <constraint firstAttribute="bottom" secondItem="h7r-WM-jWs" secondAttribute="bottom" constant="10" id="cvZ-GJ-EUd"/>
+                <constraint firstAttribute="bottom" secondItem="vK4-I4-EUQ" secondAttribute="bottom" constant="10" id="isG-kA-xJV"/>
+                <constraint firstItem="lgS-3w-puL" firstAttribute="leading" secondItem="h7r-WM-jWs" secondAttribute="trailing" constant="8" id="qTK-eZ-rRA"/>
+                <constraint firstAttribute="bottom" secondItem="lgS-3w-puL" secondAttribute="bottom" constant="10" id="t2T-mb-1Q6"/>
+                <constraint firstAttribute="trailing" secondItem="lgS-3w-puL" secondAttribute="trailing" constant="8" id="u4E-Cp-sM2"/>
+                <constraint firstItem="h7r-WM-jWs" firstAttribute="leading" secondItem="y3s-Hi-Fjg" secondAttribute="trailing" constant="8" id="y7q-wM-Tbi"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="additionalButton" destination="lgS-3w-puL" id="slg-KL-3Hn"/>
+                <outlet property="emotionButton" destination="h7r-WM-jWs" id="wcu-tF-yKr"/>
+                <outlet property="textView" destination="y3s-Hi-Fjg" id="Wyj-sO-6WG"/>
+                <outlet property="voiceButton" destination="vK4-I4-EUQ" id="g3V-ve-aqQ"/>
+            </connections>
+            <point key="canvasLocation" x="7" y="-354"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Album_ToolViewEmotion" width="30" height="30"/>
+        <image name="chat_setmode_add_btn_normal" width="28" height="28"/>
+        <image name="chat_setmode_voice_btn_normal" width="28" height="28"/>
+    </resources>
+</document>

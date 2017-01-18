@@ -11,6 +11,7 @@
 #import "CommentModel.h"
 #import "MessageCell.h"
 #import "MessageModel.h"
+#import "CoverHeaderView.h"
 
 //键盘
 #import "ChatKeyBoard.h"
@@ -18,6 +19,7 @@
 #import "MoreItem.h"
 #import "ChatToolBarItem.h"
 #import "FaceThemeModel.h"
+static NSUInteger const kCoverViewHeight = 450;
 
 @interface ViewController ()<ChatKeyBoardDelegate, ChatKeyBoardDataSource,MessageCellDelegate,UIScrollViewDelegate>
 
@@ -26,6 +28,8 @@
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
 @property (nonatomic, strong) ChatKeyBoard *chatKeyBoard;
+//头部
+@property (strong, nonatomic) CoverHeaderView* coverView;
 
 //记录table的offset.y
 @property (nonatomic, assign) CGFloat history_Y_offset;
@@ -79,10 +83,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets=NO;
+    self.coverView = [CoverHeaderView coverHeaderWithCover:[UIImage imageNamed:@"cover"] avatar:[UIImage imageNamed:@"robot"] name:@"Xiao Wei"];
+    self.tableview.contentInset=UIEdgeInsetsMake(-150, 0, 0, 0);
     [self.tableview registerClass:[MessageCell class] forCellReuseIdentifier:@"cell"];
     self.tableview.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+    self.tableview.tableHeaderView = self.coverView;
     [self.tableview setTableFooterView:[UIView new]];
     
+    [self.coverView mas_makeConstraints:^(MASConstraintMaker* make) {
+        make.right.left.top.offset(0);
+        make.width.equalTo(self.view);
+        make.height.offset(kCoverViewHeight);
+        make.bottom.offset(0);
+    }];
+    
+}
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    CoverHeaderView* headerView = (CoverHeaderView*)self.tableview.tableHeaderView;
+    /*
+     黑历史：systemLayoutSizeFittingSize算出来有700多，没办法只有设成死值了
+     实际原因是因为我没有给coverView添加Bottom约束，所以算出来的值不对
+     */
+    CGFloat height = [headerView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    CGRect frame = headerView.frame;
+    frame.size.height = height;
+    headerView.frame = frame;
+    self.tableview.tableHeaderView = headerView;
 }
 
 #pragma mark keyboardWillShow

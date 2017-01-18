@@ -68,10 +68,7 @@
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
-    return cell.frame.size.height;
-}
+
 
 //添加数据
 -(void)updateAddressBookData:(NSArray *)AddressBookDataArray{

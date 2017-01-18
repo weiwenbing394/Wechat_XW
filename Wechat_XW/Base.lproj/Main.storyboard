@@ -71,13 +71,34 @@
                         <color key="selectedImageTintColor" red="0.1685647368" green="0.63675349950000004" blue="0.26827499269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BLx-aT-xJI" kind="relationship" relationship="viewControllers" id="p2N-nv-Ggj"/>
-                        <segue destination="b4e-cK-tmy" kind="relationship" relationship="viewControllers" id="Q0x-6u-pgA"/>
+                        <segue destination="PXt-hd-bYb" kind="relationship" relationship="viewControllers" id="NZh-Bz-FEY"/>
+                        <segue destination="BLx-aT-xJI" kind="relationship" relationship="viewControllers" id="wMC-mH-Nfe"/>
+                        <segue destination="b4e-cK-tmy" kind="relationship" relationship="viewControllers" id="gWf-Jy-jOr"/>
+                        <segue destination="Ugf-6w-M7Z" kind="relationship" relationship="viewControllers" id="Eo4-3f-yoR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2q-wy-6gG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-612" y="441"/>
+        </scene>
+        <!--微信-->
+        <scene sceneID="wdn-ct-MUK">
+            <objects>
+                <viewController id="4gR-re-Zmv" customClass="chatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lp9-Ks-G5h"/>
+                        <viewControllerLayoutGuide type="bottom" id="VZx-xa-Aus"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EIX-bY-x8U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="微信" id="ydh-2x-6OD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58a-ej-YwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="-484"/>
         </scene>
         <!--朋友圈-->
         <scene sceneID="dKu-WQ-6cR">
@@ -113,7 +134,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4m7-Zx-00o">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4m7-Zx-00o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -131,11 +152,86 @@
             </objects>
             <point key="canvasLocation" x="113" y="810"/>
         </scene>
+        <!--我的-->
+        <scene sceneID="Xja-fw-cLu">
+            <objects>
+                <viewController id="z85-Zl-Wsh" customClass="MeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3aj-p2-ISm"/>
+                        <viewControllerLayoutGuide type="bottom" id="THb-BN-Tdi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UzC-2b-A8J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的" id="5Eg-aR-RC2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgD-Rx-br8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="1460"/>
+        </scene>
+        <!--微信-->
+        <scene sceneID="Ztb-bZ-ywh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PXt-hd-bYb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="微信" image="tabbar_mainframe" selectedImage="tabbar_mainframeHL" id="yhY-3a-pkB">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GxF-xk-ezA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4gR-re-Zmv" kind="relationship" relationship="rootViewController" id="Udv-4Z-hv2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1l-Cu-sDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="-484"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="kg9-ny-ZLH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ugf-6w-M7Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="tabbar_me" selectedImage="tabbar_meHL" id="z86-rO-gj9">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hTZ-GP-BM4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="z85-Zl-Wsh" kind="relationship" relationship="rootViewController" id="lhr-OK-AzF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kc1-ou-4nU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="1459.52023988006"/>
+        </scene>
     </scenes>
     <resources>
         <image name="tabbar_contacts" width="27" height="23"/>
         <image name="tabbar_contactsHL" width="27" height="23"/>
         <image name="tabbar_discover" width="23" height="23"/>
         <image name="tabbar_discoverHL" width="23" height="23"/>
+        <image name="tabbar_mainframe" width="25" height="23"/>
+        <image name="tabbar_mainframeHL" width="25" height="23"/>
+        <image name="tabbar_me" width="23" height="23"/>
+        <image name="tabbar_meHL" width="23" height="23"/>
     </resources>
 </document>
