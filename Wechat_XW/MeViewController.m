@@ -9,10 +9,14 @@
 #import "MeTableViewCell.h"
 #import "MeViewController.h"
 #import "PersonModel.h"
+#import "CameraAndPhotoPicker.h"
 
 @interface
 MeViewController ()<UITableViewDelegate, UITableViewDataSource>
+
 @property (nonatomic, strong) UITableView* tableView;
+
+@property (nonatomic, strong) CameraAndPhotoPicker *picker;
 
 //名字数组
 @property (nonatomic, copy) NSArray* dataArr;
@@ -24,14 +28,16 @@ MeViewController ()<UITableViewDelegate, UITableViewDataSource>
 @implementation MeViewController
 - (void)viewDidLoad
 {
+  self.automaticallyAdjustsScrollViewInsets=NO;
   [self initializeData];
   [self buildTableView];
+  
 }
 
 - (void)initializeData
 {
   PersonModel* model = [[PersonModel alloc] init];
-  model.avatar = @"robot";
+  model.avatar =[UIImage imageNamed:@"robot"];
   model.name = @"Xiao Wei";
   model.wechatId = @"euphoria33";
 
@@ -58,8 +64,8 @@ MeViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
   _tableView = ({
     UITableView* tableView = [[UITableView alloc]
-      initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,
-                               self.view.frame.size.height - 44)
+      initWithFrame:CGRectMake(0, 64, self.view.frame.size.width,
+                               self.view.frame.size.height - 44-64)
               style:UITableViewStyleGrouped];
 
     tableView.delegate = self;
@@ -129,6 +135,36 @@ forRowAtIndexPath:(NSIndexPath*)indexPath
   return 44;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section==0) {
+        UIAlertController *alertController=[UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *camera=[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self.picker getPhotoWithCamera:^(UIImage *selectedImage) {
+                PersonModel *model = _dataArr[indexPath.section][indexPath.row];
+                model.avatar=selectedImage;
+                [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
+            } editing:YES faild:^{
+                NSLog(@"没有拍照权限");
+            }];
+        }];
+        UIAlertAction *photo=[UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self.picker getPhotoWithPhotoLib:^(UIImage *selecteImage) {
+                PersonModel *model = _dataArr[indexPath.section][indexPath.row];
+                model.avatar=selecteImage;
+                [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
+            } editing:YES faild:^{
+                NSLog(@"没有获取相册权限");
+            }];
+        }];
+        [alertController addAction:cancelAction];
+        [alertController addAction:camera];
+        [alertController addAction:photo];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+}
+
 //设置头视图高度
 - (CGFloat)tableView:(UITableView*)tableView
   heightForHeaderInSection:(NSInteger)section
@@ -137,6 +173,13 @@ forRowAtIndexPath:(NSIndexPath*)indexPath
     return 15;
 
   return 5;
+}
+
+- (CameraAndPhotoPicker *)picker{
+    if (!_picker) {
+        _picker=[[CameraAndPhotoPicker alloc]init];
+    }
+    return _picker;
 }
 
 @end

@@ -39,5 +39,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Wechat_XW需要访问您的相机</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Wechat_XW需要访问您的相册</string>
 </dict>
 </plist>

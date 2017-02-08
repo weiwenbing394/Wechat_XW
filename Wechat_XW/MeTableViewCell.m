@@ -14,7 +14,7 @@
 {
   self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
-  self.avatarImageView.image = [UIImage imageNamed:model.avatar];
+  self.avatarImageView.image = model.avatar;
 
   self.nameLabel.text = model.name;
 

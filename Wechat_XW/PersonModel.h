@@ -12,7 +12,7 @@
 /**
  *  用户头像
  */
-@property (nonatomic, copy) NSString* avatar;
+@property (nonatomic, copy) UIImage* avatar;
 
 /**
  *  用户名称

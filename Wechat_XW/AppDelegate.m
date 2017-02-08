@@ -19,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UITabBar appearance]setTintColor:[UIColor colorWithRed:43/255.0 green:162/255.0 blue:68/255.0 alpha:1]];
     [self addADLaunchView];
     return YES;
 }

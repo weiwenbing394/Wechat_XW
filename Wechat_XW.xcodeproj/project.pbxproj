@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51174EAF1E4AB80000E19A29 /* CameraAndPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51174EAE1E4AB80000E19A29 /* CameraAndPhotoPicker.m */; };
 		51332E341E233292004549EB /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51332E331E233292004549EB /* MessageModel.m */; };
 		51332E371E2332A7004549EB /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51332E361E2332A7004549EB /* CommentModel.m */; };
 		51332E3A1E233582004549EB /* JGGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51332E391E233582004549EB /* JGGView.m */; };
@@ -433,6 +434,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51174EAD1E4AB80000E19A29 /* CameraAndPhotoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraAndPhotoPicker.h; sourceTree = "<group>"; };
+		51174EAE1E4AB80000E19A29 /* CameraAndPhotoPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraAndPhotoPicker.m; sourceTree = "<group>"; };
 		51332E311E232C9A004549EB /* wechat_XW.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wechat_XW.pch; sourceTree = "<group>"; };
 		51332E321E233292004549EB /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
 		51332E331E233292004549EB /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
@@ -969,6 +972,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51174EAC1E4AB7D400E19A29 /* CameraAndPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				51174EAD1E4AB80000E19A29 /* CameraAndPhotoPicker.h */,
+				51174EAE1E4AB80000E19A29 /* CameraAndPhotoPicker.m */,
+			);
+			name = CameraAndPhotoPicker;
+			sourceTree = "<group>";
+		};
 		515100021E1F68AE00ED2E20 /* f_static_047 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1867,6 +1879,7 @@
 		5151FF381E1F681A00ED2E20 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				51174EAC1E4AB7D400E19A29 /* CameraAndPhotoPicker */,
 				5151FCB31E2F539E00A73224 /* FDTemplateLayoutCell */,
 				51CFFAE11E289CA00068E2BC /* XWLaunchImage */,
 				51522A2F1E2732DF00C6C3EE /* PinYin4Objc */,
@@ -3323,6 +3336,7 @@
 				5151021E1E1F68CB00ED2E20 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5151FF071E1F66BB00ED2E20 /* main.m in Sources */,
 				51522A1F1E271F3800C6C3EE /* ContactViewController.m in Sources */,
+				51174EAF1E4AB80000E19A29 /* CameraAndPhotoPicker.m in Sources */,
 				51CFFAF61E28A8EE0068E2BC /* XWAdViewController.m in Sources */,
 				515102471E1F68D800ED2E20 /* UIImage+GIF.m in Sources */,
 				51522A411E2732DF00C6C3EE /* PinyinFormatter.m in Sources */,

@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets=NO;
     [self initializeData];
     [self buildTableView];
 }
@@ -58,8 +59,8 @@
 {
     // tableviewstyle为groupped的话，会有莫名其妙的contentInsets出现
     self.tableView = [[UITableView alloc]
-                      initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,
-                                               self.view.frame.size.height)
+                      initWithFrame:CGRectMake(0, 64, self.view.frame.size.width,
+                                               self.view.frame.size.height-64-49)
                       style:UITableViewStylePlain];
     
     self.tableView.delegate = self;
