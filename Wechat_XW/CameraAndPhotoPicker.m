@@ -11,6 +11,7 @@
 #import <AVFoundation/AVMediaFormat.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import <Photos/Photos.h>
 
 @interface CameraAndPhotoPicker ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -32,37 +33,76 @@
 };
 
 //拍摄
-- (void)getPhotoWithCamera:(CameraBlock)camerablock editing:(BOOL) canEditing faild:(faildBlock)faild{
+- (void)getPhotoWithCamera:(CameraBlock)camerablock editing:(BOOL) canEditing faild:(faildBlock)faild showIn:(UIViewController *)controller{
     self.cameraBlock=camerablock;
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied){
         faild();
-    }else{
-        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {//真机调试
-            self.picker.sourceType=UIImagePickerControllerSourceTypeCamera;
-            self.picker.showsCameraControls=YES;
-        }else{  //模拟器
-            self.picker.sourceType=UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-        }
-        self.picker.allowsEditing=canEditing;
-        
-        [[[UIApplication sharedApplication]delegate].window.rootViewController presentViewController:self.picker animated:YES completion:nil];
+    }else if(authStatus == AVAuthorizationStatusNotDetermined){
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+            if (granted) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self beiginTakePhoto:canEditing showIn:controller];
+                });
+            }else{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    faild();
+                });
+            }
+        }];
+    }else if(authStatus == AVAuthorizationStatusAuthorized){
+        [self beiginTakePhoto:canEditing showIn:controller];
     }
 };
+
+//开始拍摄
+- (void)beiginTakePhoto:(BOOL) canEditing showIn:(UIViewController *)controller{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {//真机调试
+        self.picker.sourceType=UIImagePickerControllerSourceTypeCamera;
+        self.picker.showsCameraControls=YES;
+    }else{  //模拟器
+        self.picker.sourceType=UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    }
+    self.picker.allowsEditing=canEditing;
+    if (controller==nil) {
+        controller=[[UIApplication sharedApplication]delegate].window.rootViewController;
+    }
+    [controller presentViewController:self.picker animated:YES completion:nil];
+}
 
 
 //从相册获取
-- (void)getPhotoWithPhotoLib:(PhotoBlock)phontoblock editing:(BOOL) canEditing faild:(faildBlock)faild{
+- (void)getPhotoWithPhotoLib:(PhotoBlock)phontoblock editing:(BOOL) canEditing faild:(faildBlock)faild showIn:(UIViewController *)controller{
     self.photoBlock=phontoblock;
-    ALAuthorizationStatus author=[ALAssetsLibrary authorizationStatus];
+    PHAuthorizationStatus author = [PHPhotoLibrary authorizationStatus];
     if (author == ALAuthorizationStatusRestricted || author == ALAuthorizationStatusDenied) {
         faild();
-    }else{
-        self.picker.sourceType=UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-        self.picker.allowsEditing=canEditing;
-        [[[UIApplication sharedApplication]delegate].window.rootViewController presentViewController:self.picker animated:YES completion:nil];
+    }else if(author == ALAuthorizationStatusNotDetermined){
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            if (status == PHAuthorizationStatusRestricted || status == PHAuthorizationStatusDenied){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                   faild();
+                });
+            }else if (status == PHAuthorizationStatusAuthorized){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self getPhotosFromLibrary:canEditing showIn:controller];
+                });
+            }
+        }];
+    }else if(author == ALAuthorizationStatusAuthorized){
+        [self getPhotosFromLibrary:canEditing showIn:controller];
     }
 };
+
+//开始读取
+- (void)getPhotosFromLibrary :(BOOL) canEditing showIn:(UIViewController *)controller{
+    self.picker.sourceType=UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    self.picker.allowsEditing=canEditing;
+    if (controller==nil) {
+        controller=[[UIApplication sharedApplication]delegate].window.rootViewController;
+    }
+    [controller presentViewController:self.picker animated:YES completion:nil];
+}
 
 
 #pragma mark delegate
@@ -105,7 +145,6 @@
 
 
 - (void)dealloc{
-    NSLog(@"释放了");
     if (self.picker) {
        self.picker=nil;
     }

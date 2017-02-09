@@ -25,8 +25,8 @@ typedef void (^faildBlock) ();
 
 + (CameraAndPhotoPicker *)shareCameraAndPhotoPicker;
 //拍摄
-- (void)getPhotoWithCamera:(CameraBlock)camerablock editing:(BOOL) canEditing faild:(faildBlock)faild;
+- (void)getPhotoWithCamera:(CameraBlock)camerablock editing:(BOOL) canEditing faild:(faildBlock)faild showIn:(UIViewController *)controller;
 //从相册获取
-- (void)getPhotoWithPhotoLib:(PhotoBlock)phontoblock editing:(BOOL) canEditing faild:(faildBlock)faild;
+- (void)getPhotoWithPhotoLib:(PhotoBlock)phontoblock editing:(BOOL) canEditing faild:(faildBlock)faild showIn:(UIViewController *)controller;
 
 @end

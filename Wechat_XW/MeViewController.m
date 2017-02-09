@@ -147,7 +147,7 @@ forRowAtIndexPath:(NSIndexPath*)indexPath
                 [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
             } editing:YES faild:^{
                 NSLog(@"没有拍照权限");
-            }];
+            } showIn:self];
         }];
         UIAlertAction *photo=[UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self.picker getPhotoWithPhotoLib:^(UIImage *selecteImage) {
@@ -156,7 +156,7 @@ forRowAtIndexPath:(NSIndexPath*)indexPath
                 [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
             } editing:YES faild:^{
                 NSLog(@"没有获取相册权限");
-            }];
+            } showIn:self];
         }];
         [alertController addAction:cancelAction];
         [alertController addAction:camera];
