@@ -148,6 +148,11 @@ forRowAtIndexPath:(NSIndexPath*)indexPath
             } editing:YES faild:^{
                 NSLog(@"没有拍照权限");
             } showIn:self];
+//            [self.picker getVideoFromCamera:^(NSURL *videoUrl, CGFloat times, CGFloat videoWidth, CGFloat videoHeight) {
+//                NSLog(@"视频地址：%@,视频长度：%.02f,视频高度:%.02f,视频宽度:%.02f",videoUrl,times,videoWidth,videoHeight);
+//            } editing:YES faild:^{
+//                
+//            } showIn:self];
         }];
         UIAlertAction *photo=[UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self.picker getPhotoWithPhotoLib:^(UIImage *selecteImage) {
@@ -157,6 +162,11 @@ forRowAtIndexPath:(NSIndexPath*)indexPath
             } editing:YES faild:^{
                 NSLog(@"没有获取相册权限");
             } showIn:self];
+//            [self.picker getVideoFromLibaray:^(NSURL *videoUrl,CGFloat times,CGFloat videoWidth,CGFloat videoHeight) {
+//                NSLog(@"视频地址：%@,视频长度：%.02f,视频高度:%.02f,视频宽度:%.02f",videoUrl,times,videoWidth,videoHeight);
+//            } editing:YES faild:^{
+//                
+//            } showIn:self];
         }];
         [alertController addAction:cancelAction];
         [alertController addAction:camera];
@@ -178,6 +188,7 @@ forRowAtIndexPath:(NSIndexPath*)indexPath
 - (CameraAndPhotoPicker *)picker{
     if (!_picker) {
         _picker=[[CameraAndPhotoPicker alloc]init];
+        _picker.saveToLocal=YES;
     }
     return _picker;
 }
